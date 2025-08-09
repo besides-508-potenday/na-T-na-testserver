@@ -5,6 +5,9 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
+// 정적 파일 제공 (테스트 클라이언트용)
+app.use(express.static('.'));
+
 mongoose
   .connect(process.env.DB, {
     useNewUrlParser: true,

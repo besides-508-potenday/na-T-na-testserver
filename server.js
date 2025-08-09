@@ -7,6 +7,9 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
+// 정적 파일 제공 (테스트 클라이언트용)
+app.use(express.static('.'));
+
 // 샘플 데이터
 let chatbots = [
   {
